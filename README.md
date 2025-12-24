@@ -1,18 +1,33 @@
-# React + Vite
+# popx-login
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+PopX Login is a small React app that recreates a mobile-style onboarding flow (landing, signup, login, profile) based on an Adobe XD design for a 375 × 812 viewport.​
+The layout is built to be as close as possible to the provided design, using absolute positioning, fixed dimensions, and the Rubik Google Font.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Centered app shell with fixed 375 × 812 size, mimicking a mobile device frame.​
 
-## React Compiler
+- Four screens with navigation:
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+  Landing (Welcome to PopX, CTA buttons).​
+  
+  Signup (full form with radio buttons).​
+  
+  Login (email, password, disabled login button style).​
+  
+  Profile (account settings card with avatar and description).​
 
-Note: This will impact Vite dev & build performances.
+- Pixel‑oriented styling using XD coordinates (top/left/width/height values) for key elements.​
 
-## Expanding the ESLint configuration
+- Google Fonts Rubik integration for consistent typography.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+### 1. Install dependencies
+
+git clone https://github.com/annie-olivia/popx-login.git
+cd popx-login
+npm install
+
+### 2. Run in development
+
+npm run dev
