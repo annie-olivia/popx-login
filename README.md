@@ -24,10 +24,14 @@ The layout is built to be as close as possible to the provided design, using abs
 ## Getting Started
 ### 1. Install dependencies
 
+```
 git clone https://github.com/annie-olivia/popx-login.git
 cd popx-login
 npm install
+```
 
 ### 2. Run in development
 
+```
 npm run dev
+```
