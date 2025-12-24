@@ -1,0 +1,677 @@
+:root {
+  --app-width: 375px;
+  --app-height: 812px;
+  --purple: #6c25ff;
+  --purple-light: #6c25ff4b;
+  --text-main: #1d2226;
+  --text-muted: rgba(29, 34, 38, 0.6);
+  --border: #cbcbcb;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  font-family: "Rubik", system-ui, -apple-system, BlinkMacSystemFont,
+  "Segoe UI", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.rubik {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-shell {
+  width: var(--app-width);
+  height: var(--app-height);
+  background: #f7f8f9 0% 0% no-repeat padding-box;
+  border-radius: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-shell::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Landing */
+
+.landing-title {
+  position: absolute;
+  top: 549px;
+  left: 20px;
+  width: 231px;
+  height: 33px;
+  text-align: left;
+  font: normal 500 28px/17px "Rubik", sans-serif;
+  letter-spacing: 0px;
+  color: #1d2226;
+  opacity: 1;
+}
+
+.landing-subtitle {
+  position: absolute;
+  top: 592px;
+  left: 20px;
+  width: 232px;
+  height: 48px;
+  text-align: left;
+  font: normal 400 18px/26px "Rubik", sans-serif;
+  letter-spacing: 0px;
+  color: #1d2226;
+  opacity: 0.6;
+}
+
+.landing-btn-primary {
+  position: absolute;
+  top: 669px;
+  left: 20px;
+  width: 335px;
+  height: 46px;
+  background: #6c25ff 0% 0% no-repeat padding-box;
+  border-radius: 6px;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-btn-primary span {
+  text-align: center;
+  font: normal 500 15px/17px "Rubik";
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.landing-btn-secondary {
+  position: absolute;
+  top: 725px;
+  left: 20px;
+  width: 335px;
+  height: 46px;
+  background: #6c25ff4b 0% 0% no-repeat padding-box;
+  border-radius: 6px;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-btn-secondary span {
+  text-align: center;
+  font: normal 500 15px/17px "Rubik";
+  letter-spacing: 0px;
+  color: #1d2226;
+  opacity: 1;
+}
+
+/* Login */
+
+.login-title {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  width: 300px;
+  height: 69px;
+  text-align: left;
+  font: normal 500 33px/36px "Rubik";
+  letter-spacing: 0px;
+  color: #1d2226;
+  opacity: 1;
+}
+
+.login-subtitle {
+  position: absolute;
+  top: 123px;
+  left: 20px;
+  width: 232px;
+  height: 48px;
+  text-align: left;
+  font: normal 400 18px/26px "Rubik";
+  letter-spacing: 0px;
+  color: #1d2226;
+  opacity: 0.6;
+}
+
+.login-label-email {
+  position: absolute;
+  top: 195px;
+  left: 34px;
+  width: 90px;
+  height: 15px;
+  text-align: left;
+  font: normal 500 13px/17px "Rubik";
+  background: #f7f8f9;   
+  letter-spacing: 0px;
+  color: #6c25ff;
+  opacity: 1;
+  z-index:80;
+}
+
+.login-input-email {
+  position: absolute;
+  top: 204px;
+  left: 20px;
+  width: 335px;
+  height: 40px;
+  border: 1px solid #cbcbcb;
+  border-radius: 6px;
+  opacity: 1;
+  background: #ffffff;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+}
+
+.login-label-password {
+  position: absolute;
+  top: 258px;
+  left: 34px;
+  width: 59px;
+  height: 15px;
+  text-align: left;
+  font: normal 500 13px/17px "Rubik";
+  background: #f7f8f9; 
+  letter-spacing: 0px;
+  color: #6c25ff;
+  opacity: 1;
+  z-index:100;
+}
+
+.login-input-password {
+  position: absolute;
+  top: 267px;
+  left: 20px;
+  width: 335px;
+  height: 40px;
+  border: 1px solid #cbcbcb;
+  border-radius: 6px;
+  opacity: 1;
+  background: #ffffff;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+}
+
+.login-password-placeholder {
+  font: normal 800 14px/17px "Rubik";
+  letter-spacing: 0px;
+  color: #919191;
+  opacity: 1;
+}
+
+.login-btn {
+  position: absolute;
+  top: 321px;
+  left: 20px;
+  width: 335px;
+  height: 46px;
+  background: #cbcbcb 0% 0% no-repeat padding-box;
+  border-radius: 6px;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-btn span {
+  text-align: center;
+  font: normal 400 16px/17px "Rubik";
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.login-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font: normal 400 14px/17px "Rubik";
+  color: #1d2226;
+}
+
+/* SIGNUP */
+
+.signup-title {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  width: 188px;
+  height: 69px;
+  text-align: left;
+  font: normal 500 28px/36px "Rubik";
+  letter-spacing: 0px;
+  color: #1d2226;
+  opacity: 1;
+}
+
+.signup-box-fullname {
+  position: absolute;
+  top: 140px;
+  left: 20px;
+  width: 335px;
+  height: 40px;
+  border: 1px solid #cbcbcb;
+  border-radius: 6px;
+  opacity: 1;
+  background: #ffffff;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+}
+
+.signup-label-fullname {
+  position: absolute;
+  top: 131px;
+  left: 34px;
+  width: 68px;
+  height: 15px;
+  text-align: left;
+  font: normal 400 13px/17px "Rubik";
+  letter-spacing: 0px;
+  color: #6C25FF;
+  opacity: 1;
+  background: #f7f8f9;
+  z-index:80;
+}
+
+.signup-input-fullname {
+  width: 100%;
+  border: none;
+  outline: none;
+  font: normal 400 14px/17px "Rubik";
+  color: #1d2226;
+}
+
+
+.signup-box-phone {
+  position: absolute;
+  top: 209px;
+  left: 20px;
+  width: 335px;
+  height: 40px;
+  border: 1px solid #cbcbcb;
+  border-radius: 6px;
+  opacity: 1;
+  background: #ffffff;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+}
+
+.signup-label-phone {
+  position: absolute;
+  top: 200px;
+  left: 34px;
+  width: 99px;
+  height: 15px;
+  text-align: left;
+  font: normal 400 13px/17px "Rubik";
+  letter-spacing: 0px;
+  color: #6C25FF;
+  opacity: 1;
+  background: #f7f8f9;
+  z-index:80;
+}
+
+.signup-input-phone {
+  width: 100%;
+  border: none;
+  outline: none;
+  font: normal 400 14px/17px "Rubik";
+  color: #1d2226;
+}
+
+.signup-box-email {
+  position: absolute;
+  top: 278px;
+  left: 20px;
+  width: 335px;
+  height: 40px;
+  border: 1px solid #cbcbcb;
+  border-radius: 6px;
+  opacity: 1;
+  background: #ffffff;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+}
+
+.signup-label-email {
+  position: absolute;
+  top: 269px;
+  left: 34px;
+  width: 92px;
+  height: 15px;
+  text-align: left;
+  font: normal 400 13px/17px "Rubik";
+  letter-spacing: 0px;
+  color: #6C25FF;
+  opacity: 1;
+  background: #f7f8f9;
+  z-index:80;
+}
+
+.signup-input-email {
+  width: 100%;
+  border: none;
+  outline: none;
+  font: normal 400 14px/17px "Rubik";
+  color: #1d2226;
+}
+
+.signup-box-password {
+  position: absolute;
+  top: 347px;
+  left: 20px;
+  width: 335px;
+  height: 40px;
+  border: 1px solid #cbcbcb;
+  border-radius: 6px;
+  opacity: 1;
+  background: #ffffff;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+}
+
+.signup-label-password {
+  position: absolute;
+  top: 338px;
+  left: 34px;
+  width: 68px;
+  height: 15px;
+  text-align: left;
+  font: normal 400 13px/17px "Rubik";
+  letter-spacing: 0px;
+  color: #6C25FF;
+  opacity: 1;
+  background: #f7f8f9;
+  z-index:80;
+}
+
+.signup-input-password {
+  width: 100%;
+  border: none;
+  outline: none;
+  font: normal 400 14px/17px "Rubik";
+  color: #1d2226;
+}
+
+.signup-box-company {
+  position: absolute;
+  top: 416px;
+  left: 20px;
+  width: 335px;
+  height: 40px;
+  border: 1px solid #cbcbcb;
+  border-radius: 6px;
+  opacity: 1;
+  background: #ffffff;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+}
+
+.signup-label-company {
+  position: absolute;
+  top: 407px;
+  left: 34px;
+  width: 97px;
+  height: 15px;
+  text-align: left;
+  font: normal 400 13px/17px "Rubik";
+  letter-spacing: 0px;
+  color: #6c25ff;
+  opacity: 1;
+  background: #f7f8f9;
+  z-index:80;
+}
+
+.signup-input-company {
+  width: 100%;
+  border: none;
+  outline: none;
+  font: normal 400 14px/17px "Rubik";
+  color: #1d2226;
+}
+
+.signup-label-agency {
+  position: absolute;
+  top: 474px;
+  left: 20px;
+  width: 128px;
+  height: 15px;
+  text-align: left;
+  font: normal 400 13px/17px "Rubik";
+  letter-spacing: 0px;
+  color: #1d2226;
+  opacity: 1;
+}
+
+.signup-radio-yes-outer {
+  position: absolute;
+  top: 499px;
+  left: 20px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid #642af5;
+  opacity: 1;
+}
+
+.signup-radio-yes-inner {
+  position: absolute;
+  top: 504px;
+  left: 25px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #6c25ff 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.signup-radio-yes-text {
+  position: absolute;
+  top: 502px;
+  left: 54px;
+  width: 23px;
+  height: 17px;
+  text-align: left;
+  font: normal 400 14px/17px "Rubik";
+  letter-spacing: 0px;
+  color: #1d2226;
+  opacity: 1;
+}
+
+.signup-radio-no-outer {
+  position: absolute;
+  top: 499px;
+  left: 100px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid #919191;
+  opacity: 1;
+}
+
+.signup-radio-no-text {
+  position: absolute;
+  top: 502px;
+  left: 134px;
+  width: 18px;
+  height: 17px;
+  text-align: left;
+  font: normal 400 14px/17px "Rubik";
+  letter-spacing: 0px;
+  color: #1d2226;
+  opacity: 1;
+}
+
+.required-star {
+  color: #dd4a3d;
+  margin-left: 2px;
+}
+
+.signup-btn {
+  position: absolute;
+  top: 736px;
+  left: 20px;
+  width: 335px;
+  height: 46px;
+  background: #6c25ff 0% 0% no-repeat padding-box;
+  border-radius: 6px;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-btn span {
+  text-align: center;
+  font: normal 500 16px/17px "Rubik";
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+/* PROFILE */
+
+.profile-header-bar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 375px;
+  height: 68px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000007;
+  opacity: 1;
+}
+
+.profile-header-text {
+  position: absolute;
+  top: 27px;
+  left: 15px;
+  width: 146px;
+  height: 22px;
+  text-align: left;
+  font: normal 400 18px/21px "Rubik";
+  letter-spacing: 0px;
+  color: #1d2226;
+  text-transform: capitalize;
+  opacity: 1;
+}
+
+
+.profile-avatar {
+  position: absolute;
+  top: 98px;
+  left: 20px;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: transparent url("assets/Ellipse\ 114.png") 0% 0% no-repeat padding-box;
+  background-size: cover;
+  opacity: 1;
+}
+
+.profile-camera {
+  position: absolute;
+  top: 147px;
+  left: 79px;
+  width: 21px;
+  height: 23px;
+  background: transparent url("assets/Group\ 1585.svg") 0% 0% no-repeat padding-box;
+  background-size: cover;
+  opacity: 1;
+}
+
+.profile-name {
+  position: absolute;
+  top: 98px;
+  left: 116px;
+  width: 73px;
+  height: 18px;
+  text-align: left;
+  font: normal 500 15px/19px "Rubik";
+  letter-spacing: 0px;
+  color: #1d2226;
+  text-transform: capitalize;
+  opacity: 1;
+}
+
+.profile-email {
+  position: absolute;
+  top: 122px;
+  left: 116px;
+  width: 118px;
+  height: 17px;
+  text-align: left;
+  font: normal 400 14px/19px "Rubik";
+  letter-spacing: 0px;
+  color: #1d2226;
+  text-transform: capitalize;
+  opacity: 1;
+}
+
+.profile-description {
+  position: absolute;
+  top: 204px;
+  left: 20px;
+  width: 337px;
+  height: 63px;
+  text-align: left;
+  font: normal 400 14px/22px "Rubik";
+  letter-spacing: 0px;
+  color: #1d2226;
+  text-transform: capitalize;
+  opacity: 1;
+}
+
+.profile-line-top {
+  position: absolute;
+  top: 287px;
+  left: 0px;
+  width: 375px;
+  border: 1px dashed #cbcbcb;
+  opacity: 1;
+}
+
+.profile-line-bottom {
+  position: absolute;
+  top: 776px;
+  left: 0px;
+  width: 375px;
+  border: 1px dashed #cbcbcb;
+  opacity: 1;
+}
